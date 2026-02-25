@@ -1,0 +1,16 @@
+{
+  "checkpoint_path": "./work_dir/ViPSAM/ViPSAM_sam.pth",
+  "test_ct_mr_root": "./data/test/image",
+  "test_mask_root": "./data/test/Mask",
+  "results_dir": "./output/result",
+  "model_name": "test",
+  "batch_size": 1,
+  "num_workers": 4,
+  "gpu_device": 0,
+  "sam_ckpt": "./work_dir/SAM/sam_vit_b_01ec64.pth",
+  "image_size": 1024,
+  "prompt_type": "box",
+  "use_lora": true,
+  "lora_rank": 8,
+  "lora_alpha": 8
+}

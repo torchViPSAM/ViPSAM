@@ -1,5 +1,4 @@
 from dataclasses import dataclass, fields
-from typing import Optional
 
 @dataclass
 class Cfg:
@@ -25,14 +24,6 @@ class Cfg:
     use_lora: bool = False # True: use LoRA, False: use full model
     lora_rank: int = 8
     lora_alpha: int = 8
-
-    output_dir: Optional[str] = None
-    resume_path: Optional[str] = None
-    experiment_name: str = "ViPSAM"
-    ct_mr_root: str = ""
-    mask_root: str = ""
-
-
 
 def cfg_from_dict(d: dict) -> Cfg:
     names = {f.name for f in fields(Cfg)}

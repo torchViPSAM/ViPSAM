@@ -1,6 +1,7 @@
 import torch, torch.nn as nn
+
 from segment_anything import sam_model_registry
-from module import apply_lora_to_decoder
+from .module import apply_lora_to_decoder
 
 class CTMRISegModel(nn.Module):
     def __init__(self, cfg, fusion):

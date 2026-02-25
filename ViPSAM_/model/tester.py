@@ -3,12 +3,13 @@ import numpy as np
 import torch
 import torch.nn.functional as F
 
-from metrics_and_loss import seg_loss, dice_coeff, iou_score, hd95_score
-from utils import generate_box_prompt,generate_click_prompt,save_epoch_visual,update_overlay_and_save,patient_key_from_case_id
+from .metrics_loss import seg_loss, dice_coeff, iou_score, hd95_score
+from utils import generate_box_prompt, generate_click_prompt, save_epoch_visual, update_overlay_and_save
+from data import patient_key_from_case_id
 
 MAX_VIS_OVERLAYS = 5
 
-def validation_loop(model, val_loader, cfg, device, prompt_type=None, vis_dir=None, epoch=None, save_vis=True):
+def validation_loop(model, val_loader, cfg, device, vis_dir=None, epoch=None, save_vis=True):
     model.eval()
     va_loss, va_dice, va_iou = 0.0, 0.0, 0.0
     all_dices = []
@@ -24,7 +25,8 @@ def validation_loop(model, val_loader, cfg, device, prompt_type=None, vis_dir=No
 
     per_sample_metrics = []
 
-    image_size = getattr(model, "image_size", cfg.img_size)
+    image_size = cfg.img_size
+    prompt_type = cfg.prompt_type
 
     num_overlays_saved = 0
     saved_cases = {}
