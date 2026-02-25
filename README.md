@@ -18,3 +18,4 @@ A Pytorch implementation of deep-learning-based model.
 ## Evaluation
 
 * test.py is the implementation code if inference for liver lesion segmentation
+* You can run the code by running "sh test.sh" in terminal.
