@@ -13,3 +13,7 @@ __pycache__/
 *.pth
 work_dir/
 !work_dir/ViPSAM/ViPSAM_sam.pth
+
+!work_dir/
+!work_dir/ViPSAM/
+!work_dir/ViPSAM/*.pth
