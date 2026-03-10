@@ -1,0 +1,2 @@
+work_dir/ViPSAM filter=lfs diff=lfs merge=lfs -text
+work_dir/ViPSAM/*.pth filter=lfs diff=lfs merge=lfs -text
