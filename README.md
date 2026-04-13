@@ -1,4 +1,4 @@
-# ViPSAM : Visaul Prompting Medical Image Segmentation Using Segment Anything Model
+# ViPSAM : Visual Prompting Medical Image Segmentation Using Segment Anything Model
 
 ![Framework](./assets/framework.png)
 
