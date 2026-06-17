@@ -1,6 +1,6 @@
 # ViPSAM : Visual Prompting Medical Image Segmentation Using Segment Anything Model
 
-![Framework](.framework_rev.png)
+![Framework](./framework_rev.png)
 
 The official source code for "ViPSAM: Visual Prompting Medical Image Segmentation Using Segment Anything Model".
 
